@@ -2,93 +2,75 @@
 <html>
     <head>
         <style>
-           /* Dropdown Button */
-            .dropbtn {
-                background-color: #4CAF50;
-                color: white;
-                padding: 16px;
-                font-size: 16px;
-                border: none;
-            }
-            .dropbtn1 {
-                background-color: #4CAF50;
-                color: white;
-                padding: 16px;
-                font-size: 16px;
-                border: none;
-            }
+           /* Navbar container */
+        .navbar {
+          overflow: hidden;
+          background-color: #333;
+          font-family: Arial;
+        }
 
-            /* The container <div> - needed to position the dropdown content */
-            .dropdown {
-                position: relative;
-                display: inline-block;
-            }
-            .dropdown1 {
-                position: relative;
-                display: inline-block;
-            }
+        /* Links inside the navbar */
+        .navbar a {
+          float: left;
+          font-size: 16px;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
 
-            /* Dropdown Content (Hidden by Default) */
-            .dropdown-content {
-                display: none;
-                position: absolute;
-                background-color: #f1f1f1;
-                min-width: 160px;
-                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-                z-index: 1;
-            }
-            .dropdown-content1 {
-                display: none;
-                position: absolute;
-                background-color: #f1f1f1;
-                min-width: 160px;
-                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-                z-index: 1;
-            }
+        /* The dropdown container */
+        .dropdown {
+          float: left;
+          overflow: hidden;
+        }
 
-            /* Links inside the dropdown */
-            .dropdown-content a {
-                color: black;
-                padding: 12px 16px;
-                text-decoration: none;
-                display: block;
-            }
+        /* Dropdown button */
+        .dropdown .dropbtn {
+          font-size: 16px;
+          border: none;
+          outline: none;
+          color: white;
+          padding: 14px 16px;
+          background-color: inherit;
+          font-family: inherit; /* Important for vertical align on mobile phones */
+          margin: 0; /* Important for vertical align on mobile phones */
+        }
 
-            .dropdown-content1 a {
-                color: black;
-                padding: 12px 16px;
-                text-decoration: none;
-                display: block;
-            }
+        /* Add a red background color to navbar links on hover */
+        .navbar a:hover, .dropdown:hover .dropbtn {
+          background-color: red;
+        }
 
+        /* Dropdown content (hidden by default) */
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f9f9f9;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
 
-            /* Change color of dropdown links on hover */
-            .dropdown-content a:hover {background-color: #ddd}
+        /* Links inside the dropdown */
+        .dropdown-content a {
+          float: none;
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+          text-align: left;
+        }
 
-            .dropdown-content1 a:hover {background-color: #ddd}
+        /* Add a grey background color to dropdown links on hover */
+        .dropdown-content a:hover {
+          background-color: #ddd;
+        }
 
-            /* Show the dropdown menu on hover */
-            .dropdown:hover .dropdown-content {
-            display: block;
-            }
-            .dropdown1:hover .dropdown-content1 {
-            display: block;
-            }
-
-            /* Change the background color of the dropdown button when the dropdown content is shown */
-            .dropdown:hover .dropbtn {
-            background-color: #3e8e41;
-            }
-            .dropdown1:hover .dropbtn1 {
-            background-color: #3e8e41;
-            }
-
-            .center {
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-                width: 50%;
-            }
+        /* Show the dropdown menu on hover */
+        .dropdown:hover .dropdown-content {
+          display: block;
+        }
             body
             {
                background: url("http://blog.onehallyu.com/wp-content/uploads/2018/01/BadBoy-RV.jpg");
@@ -104,25 +86,23 @@
         <title>KPop Fan Site</title>
     </head>
     <body>
-        <div class="dropdown">
-         <button class="dropbtn">Red Velvet In Guest Shows</button>
-         <div class="dropdown-content">
-            <a href="https://www1.ondramanice.io/ask-us-anything/watch-ask-us-anything-episode-84-online">Knowing Bros (Red Velvet)</a>
-            <a href="https://www1.ondramanice.io/weekly-idol/watch-weekly-idol-episode-331-online">Weekly Idol (Red Velvet)</a>
-            <a href="https://www1.ondramanice.io/i-can-see-your-voice-s5/watch-i-can-see-your-voice-s5-episode-4-online">I Can See Your Voice S5 (Red Velvet)</a>
-         </div>
-         </div>
-         <div class="dropdown1">
-         <button class="dropbtn1">Red Velvet Member Info</button>
-         <div class="dropdown-content1">
-            <a href="http://redvelvet.wikia.com/wiki/Irene">Irene</a>
-            <a href="http://redvelvet.wikia.com/wiki/Seulgi">Seulgi</a>
-            <a href="http://redvelvet.wikia.com/wiki/Wendy">Wendy</a>
-            <a href="http://redvelvet.wikia.com/wiki/Joy">Joy</a>
-            <a href="http://redvelvet.wikia.com/wiki/Yeri">Yeri</a>
-         </div>
-         </div>
-
+        <div class="navbar">
+          <a href="http://redvelvet.wikia.com/wiki/Irene">Irene</a>
+          <a href="http://redvelvet.wikia.com/wiki/Seulgi">Seulgi</a>
+          <a href="http://redvelvet.wikia.com/wiki/Wendy">Wendy</a>
+          <a href="http://redvelvet.wikia.com/wiki/Joy">Joy</a>
+          <a href="http://redvelvet.wikia.com/wiki/Yeri">Yeri</a>
+          <div class="dropdown">
+            <button class="dropbtn">Dropdown
+                 <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="https://www1.ondramanice.io/ask-us-anything/watch-ask-us-anything-episode-84-online">Knowing Bros (Red Velvet)</a>
+              <a href="https://www1.ondramanice.io/weekly-idol/watch-weekly-idol-episode-331-online">Weekly Idol (Red Velvet)</a>
+              <a href="https://www1.ondramanice.io/i-can-see-your-voice-s5/watch-i-can-see-your-voice-s5-episode-4-online">I Can See Your Voice S5 (Red Velvet)</a>
+            </div>
+          </div>
+        </div>
         <h1>
 
         </h1>
